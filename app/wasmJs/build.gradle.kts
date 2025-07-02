@@ -20,7 +20,7 @@ kotlin {
 
     sourceSets {
         wasmJsMain.dependencies {
-            implementation(project(":composeApp"))
+            implementation(project(":presentation:root"))
             implementation(compose.runtime)
             implementation(compose.foundation)
         }
