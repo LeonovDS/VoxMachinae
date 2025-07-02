@@ -13,7 +13,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Preview
 @Composable
-internal fun App() {
+fun App() {
     AppTheme {
         Surface(
             modifier = Modifier.fillMaxSize(),
