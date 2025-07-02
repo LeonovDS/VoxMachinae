@@ -5,6 +5,7 @@ import kotlinx.browser.document
 
 @OptIn(ExperimentalComposeUiApi::class)
 fun main() {
+    println("Hello, World!")
     val body = document.body ?: return
     ComposeViewport(body) {
         App()

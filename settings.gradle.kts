@@ -36,3 +36,4 @@ plugins {
 include(":composeApp")
 include(":app:android")
 include(":app:desktop")
+include(":app:wasmJs")
