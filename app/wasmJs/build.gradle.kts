@@ -19,10 +19,14 @@ kotlin {
     }
 
     sourceSets {
-        wasmJsMain.dependencies {
-            implementation(project(":presentation:root"))
-            implementation(compose.runtime)
-            implementation(compose.foundation)
+        wasmJsMain {
+            kotlin.srcDirs("src/")
+            resources.srcDirs("res/")
+            dependencies {
+                implementation(project(":presentation:root"))
+                implementation(compose.runtime)
+                implementation(compose.foundation)
+            }
         }
     }
 }

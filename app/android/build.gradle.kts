@@ -15,12 +15,17 @@ kotlin {
     }
 
     sourceSets {
-        androidMain.dependencies {
-            implementation(compose.uiTooling)
-            implementation(libs.androidx.activityCompose)
-            implementation(libs.kotlinx.coroutines.android)
-            implementation(libs.ktor.client.okhttp)
-            implementation(project(":presentation:root"))
+        androidMain {
+            kotlin.srcDirs("src/")
+            resources.srcDirs("res/")
+
+            dependencies {
+                implementation(compose.uiTooling)
+                implementation(libs.androidx.activityCompose)
+                implementation(libs.kotlinx.coroutines.android)
+                implementation(libs.ktor.client.okhttp)
+                implementation(project(":presentation:root"))
+            }
         }
     }
 }
@@ -33,11 +38,17 @@ android {
         minSdk = 21
         targetSdk = 36
 
-        applicationId = "com.yshmgrt.voxmachinae.androidApp"
+        applicationId = "com.yshmgrt.voxmachinae"
         versionCode = 1
         versionName = "1.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+    sourceSets {
+        getByName("main") {
+            manifest.srcFile("AndroidManifest.xml")
+            res.srcDirs("res")
+        }
     }
 }
 

@@ -13,11 +13,14 @@ kotlin {
     jvm()
 
     sourceSets {
-        jvmMain.dependencies {
-            implementation(compose.desktop.currentOs)
-            implementation(libs.kotlinx.coroutines.swing)
-            implementation(libs.ktor.client.okhttp)
-            implementation(project(":presentation:root"))
+        jvmMain {
+            kotlin.srcDirs("src/")
+            dependencies {
+                implementation(compose.desktop.currentOs)
+                implementation(libs.kotlinx.coroutines.swing)
+                implementation(libs.ktor.client.okhttp)
+                implementation(project(":presentation:root"))
+            }
         }
     }
 }

@@ -21,27 +21,25 @@ kotlin {
     }
 
     sourceSets {
-        commonMain.dependencies {
-            implementation(compose.runtime)
-            implementation(compose.foundation)
-            implementation(compose.material3)
-            implementation(compose.components.resources)
-            implementation(compose.components.uiToolingPreview)
-            implementation(project(":presentation:theme"))
+        commonMain {
+            kotlin.srcDirs("src/")
+            dependencies {
+                implementation(compose.runtime)
+                implementation(compose.foundation)
+                implementation(compose.material3)
+                implementation(compose.components.resources)
+                implementation(compose.components.uiToolingPreview)
+                implementation(project(":presentation:theme"))
+            }
         }
 
-        commonTest.dependencies {
-            implementation(kotlin("test"))
-            @OptIn(ExperimentalComposeLibrary::class)
-            implementation(compose.uiTest)
-        }
-
-        androidMain.dependencies {
-            implementation(compose.uiTooling)
-        }
-
-        jvmMain.dependencies {
-            implementation(compose.desktop.currentOs)
+        commonTest {
+            kotlin.srcDirs("test/")
+            dependencies {
+                implementation(kotlin("test"))
+                @OptIn(ExperimentalComposeLibrary::class)
+                implementation(compose.uiTest)
+            }
         }
     }
 }
