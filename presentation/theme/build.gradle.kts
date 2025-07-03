@@ -11,10 +11,6 @@ kotlin {
 
     jvm()
     androidTarget()
-    wasmJs {
-        browser()
-        binaries.executable()
-    }
 
     sourceSets {
         commonMain {
@@ -57,9 +53,6 @@ kotlin {
                 implementation(libs.kotlinx.coroutines.swing)
                 implementation(libs.ktor.client.okhttp)
             }
-        }
-        wasmJsMain {
-            kotlin.srcDirs("src@wasmJs/")
         }
     }
 }

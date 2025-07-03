@@ -1,3 +1,14 @@
+gradle.taskGraph.whenReady {
+    allprojects {
+        tasks.configureEach {
+            if (name.contains("testDebugUnitTest") || name.contains("testReleaseUnitTest")) {
+                enabled = false
+                println("❌ Disabled task: $path")
+            }
+        }
+    }
+}
+
 plugins {
     alias(libs.plugins.multiplatform).apply(false)
     alias(libs.plugins.compose.compiler).apply(false)

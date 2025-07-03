@@ -15,10 +15,6 @@ kotlin {
 
     jvm()
     androidTarget()
-    wasmJs {
-        browser()
-        binaries.executable()
-    }
 
     sourceSets {
         commonMain {
