@@ -1,0 +1,13 @@
+product:
+  type: android/app
+
+settings:
+  android:
+    namespace: com.yshmgrt.voxmachinae
+  compose:
+    enabled: true
+
+dependencies:
+  - $libs.androidx.activityCompose
+  - $compose.material3
+  - ../../presentation/root
