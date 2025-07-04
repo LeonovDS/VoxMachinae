@@ -38,10 +38,6 @@ decompose-compose = { module = "com.arkivanov.decompose:extensions-compose", ver
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koin" }
-kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
-kotest-framework-engine = { module = "io.kotest:kotest-framework-engine", version.ref = "kotest" }
-kotest-framework-datatest = { module = "io.kotest:kotest-framework-datatest", version.ref = "kotest" }
-kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
 
 [plugins]
 
@@ -52,4 +48,3 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 hotReload = { id = "org.jetbrains.compose.hot-reload", version.ref = "hotReload" }
 kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
-kotest-multiplatform = { id = "io.kotest.multiplatform", version.ref = "kotest" }

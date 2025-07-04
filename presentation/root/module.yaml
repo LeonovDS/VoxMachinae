@@ -1,0 +1,11 @@
+product:
+  type: lib
+  platforms: [ android, jvm, ]
+
+settings:
+  compose:
+    enabled: true
+
+dependencies:
+  - $compose.material3
+  - ../theme
